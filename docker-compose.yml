@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  dockertest.server:
+    image: ${DOCKER_REGISTRY-}dockertestserver
+    build:
+      context: .
+      dockerfile: DockerTest.Server/Dockerfile
+    ports:
+      - "56800"
